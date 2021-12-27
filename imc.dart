@@ -2,12 +2,22 @@
 
 void main(){
   Human marcos = Human('Marcos', 71.5, 1.69 );
-  marcos.exibirDados();
+  print('Nome: ${marcos.nome}');
+  print('Peso: ${marcos.peso} kg');
+  print('Altura: ${marcos.altura} m');
+  double imc = marcos.calcularImc();
+  print('IMC: ${imc.toStringAsFixed(2)}');
+  print('Classificacao: ${marcos.classificacao(imc)}');
   
   print('------');
   
   Human claudiany = Human('Claudiany', 54, 1.69);
-  claudiany.exibirDados();
+  print('Nome: ${claudiany.nome}');
+  print('Peso: ${claudiany.peso} kg');
+  print('Altura: ${claudiany.altura} m');
+  imc = claudiany.calcularImc();
+  print('IMC: ${imc.toStringAsFixed(2)}');
+  print('Classificacao: ${claudiany.classificacao(imc)}');
 }
 
 //classe que representa uma pessoa
@@ -70,15 +80,5 @@ class Human {
     }else{
       return 'Obesidade grau III';
     }
-  }
-
-  //metodo para exibir dados do usuario
-  void exibirDados(){
-    print('Nome: $nome');
-    print('Peso: $peso kg');
-    print('Altura: $altura m');
-    double imc = calcularImc();
-    print('IMC: ${imc.toStringAsFixed(2)}');
-    print('Classificacao: ${classificacao(imc)}');
   }
 }
