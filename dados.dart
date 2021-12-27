@@ -40,6 +40,7 @@ class Pessoa {
 
   void mostrarDados(){
     print('Nome: $nome');
+    print('Nascimento: ${nascimento.day}/${nascimento.month}/${nascimento.year}');
     print('Idade: ${idade()}');
     print('Altura: $altura m');
   }
